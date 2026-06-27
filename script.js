@@ -235,3 +235,11 @@ document.querySelectorAll(".work-card").forEach((card) => {
     card.style.transform = "";
   });
 });
+
+
+// Apple-style motion enhancement init
+window.addEventListener("DOMContentLoaded", () => {
+  requestAnimationFrame(() => {
+    document.body.classList.add("motion-ready");
+  });
+});

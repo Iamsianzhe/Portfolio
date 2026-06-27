@@ -1435,3 +1435,216 @@ button {
 .floating-card {
   display: none !important;
 }
+
+
+/* Apple-style motion enhancement */
+@media (prefers-reduced-motion: no-preference) {
+  body.motion-ready .site-header {
+    animation: appleHeaderDrop .9s var(--ease) both;
+  }
+
+  body.motion-ready .hero-copy .eyebrow {
+    animation: appleFadeUp .9s var(--ease) .08s both;
+  }
+
+  body.motion-ready .hero-copy h1 {
+    animation: appleFadeUp 1s var(--ease) .18s both;
+  }
+
+  body.motion-ready .hero-desc {
+    animation: appleFadeUp 1s var(--ease) .30s both;
+  }
+
+  body.motion-ready .hero-actions {
+    animation: appleFadeUp 1s var(--ease) .42s both;
+  }
+
+  body.motion-ready .hero-visual {
+    animation: appleFadeScale 1.05s var(--ease) .28s both;
+  }
+
+  body.motion-ready .clean-phone-shell,
+  body.motion-ready .phone-shell {
+    animation: appleFloat 6.5s ease-in-out 1.4s infinite alternate;
+  }
+
+  body.motion-ready .work-card {
+    transition:
+      transform .55s var(--ease),
+      background .55s var(--ease),
+      border-color .55s var(--ease),
+      box-shadow .55s var(--ease);
+  }
+
+  body.motion-ready .work-card:hover {
+    box-shadow:
+      0 38px 110px rgba(0,0,0,.42),
+      0 0 0 1px rgba(255,255,255,.10) inset;
+  }
+
+  body.motion-ready .work-card-cover,
+  body.motion-ready .work-card-video {
+    transition: transform .8s var(--ease), filter .8s var(--ease);
+  }
+
+  body.motion-ready .work-card:hover .work-card-cover,
+  body.motion-ready .work-card:hover .work-card-video {
+    transform: scale(1.075);
+    filter: saturate(1.06) contrast(1.04) brightness(1.03);
+  }
+
+  body.motion-ready .tool-card,
+  body.motion-ready .process-step,
+  body.motion-ready .about-card,
+  body.motion-ready .contact-panel {
+    transition:
+      transform .55s var(--ease),
+      background .55s var(--ease),
+      border-color .55s var(--ease),
+      box-shadow .55s var(--ease);
+  }
+
+  body.motion-ready .tool-card:hover,
+  body.motion-ready .process-step:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 90px rgba(0,0,0,.34);
+    border-color: rgba(255,255,255,.28);
+  }
+
+  body.motion-ready .modal.active .modal-backdrop {
+    animation: appleBackdropIn .32s var(--ease) both;
+  }
+
+  body.motion-ready .modal.active .modal-panel {
+    animation: appleModalIn .52s var(--ease) both;
+  }
+
+  body.motion-ready .button,
+  body.motion-ready .contact-links a,
+  body.motion-ready .text-button {
+    transition:
+      transform .35s var(--ease),
+      background .35s var(--ease),
+      color .35s var(--ease),
+      border-color .35s var(--ease),
+      box-shadow .35s var(--ease);
+  }
+
+  body.motion-ready .button:hover,
+  body.motion-ready .contact-links a:hover {
+    transform: translateY(-2px) scale(1.025);
+    box-shadow: 0 18px 50px rgba(0,0,0,.30);
+  }
+
+  body.motion-ready .ambient-one {
+    animation: appleAmbientOne 12s ease-in-out infinite alternate;
+  }
+
+  body.motion-ready .ambient-two {
+    animation: appleAmbientTwo 14s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes appleHeaderDrop {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-18px) scale(.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+@keyframes appleFadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+@keyframes appleFadeScale {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0) scale(.96);
+    filter: blur(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes appleFloat {
+  0% {
+    transform: rotateX(4deg) rotateY(-8deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotateX(3deg) rotateY(-6deg) translate3d(0, -14px, 0);
+  }
+}
+
+@keyframes appleModalIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0) scale(.965);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes appleBackdropIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(18px);
+  }
+}
+
+@keyframes appleAmbientOne {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: .22;
+  }
+  to {
+    transform: translate3d(70px, 35px, 0) scale(1.08);
+    opacity: .30;
+  }
+}
+
+@keyframes appleAmbientTwo {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: .20;
+  }
+  to {
+    transform: translate3d(-60px, -40px, 0) scale(1.12);
+    opacity: .28;
+  }
+}
+
+/* smoother glass feeling */
+.site-header,
+.work-card,
+.tool-card,
+.process-step,
+.about-card,
+.contact-panel,
+.modal-panel {
+  backdrop-filter: blur(30px) saturate(170%);
+  -webkit-backdrop-filter: blur(30px) saturate(170%);
+}

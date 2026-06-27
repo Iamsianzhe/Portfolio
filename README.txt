@@ -147,3 +147,34 @@
 - 已将 AI 素材生成工作流还原为上一版样式。
 - 已修复首页「下载简历 PDF」按钮样式。
 - 简历 PDF 点击后会在新标签页打开，不覆盖当前作品集页面。
+
+
+本次更新：
+- 新增 Apple 风格动效增强：
+  1. 首页标题、说明、按钮逐层淡入
+  2. 导航栏轻微下滑入场
+  3. 手机模型轻微浮动
+  4. 作品卡片 hover 放大与光影变化
+  5. 弹窗打开更柔和
+  6. 背景光晕轻微漂浮
+- 动效遵循 prefers-reduced-motion，减少动画模式下不会强制播放。
+
+
+本次更新：
+- 首页改为更通用的商业视频与视觉作品集方向。
+- 首页标题：让广告内容被看见、被记住，也更愿意被看完。
+- 首页副标题：展示短视频广告、创意影像、AI视觉生成、实拍剪辑与商业内容包装能力。
+- 英文小标题：COMMERCIAL VIDEO & VISUAL PORTFOLIO
+- 手机 UI 文案：Make it visual. Make it memorable.
+- About Me 已改为广告创意与商业内容制作方向。
+- 作品结构保持不变。
+- 最后一页已删除「海外效果视觉设计实习生方向｜作品集」字样。
+
+本次更新：
+- 保持 Creative Process 六个卡片原有样式不变。
+- 仅替换卡片标题与说明文字，使其更适合银都奥美/广告制作方向。
+
+
+本次修复：
+- 已将首页英文小标题从 OVERSEAS PERFORMANCE VISUAL DESIGN PORTFOLIO 改为 COMMERCIAL VIDEO & VISUAL PORTFOLIO。
+- 保留上一版 Creative Process 卡片样式与文字修改。
